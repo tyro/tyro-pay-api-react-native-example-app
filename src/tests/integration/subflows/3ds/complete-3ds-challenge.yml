@@ -1,0 +1,10 @@
+appId: com.exampleapp
+---
+- extendedWaitUntil:
+    visible: "Enter Your Authentication Data"
+    timeout: 300000
+- tapOn: 
+    text: "Password:"
+- inputText: "123456"
+- tapOn: 
+    text: "SUBMIT"

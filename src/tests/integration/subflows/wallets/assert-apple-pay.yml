@@ -1,0 +1,3 @@
+appId: com.exampleapp
+---
+- assertVisible: "Demo Merchant Checkout"

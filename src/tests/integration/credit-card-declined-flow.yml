@@ -1,0 +1,20 @@
+appId: com.exampleapp
+---
+- launchApp
+# Run Failed Payment Flow
+# assert app loaded
+- runFlow:
+    file: subflows/assert-loaded.yml
+
+# Visa Failure Flow Card Declined
+# Enter card number for card declined
+- runFlow:
+    file: subflows/credit-card/enter-card-declined-details.yml
+
+# Enter card details name/month/cvv and submit
+- runFlow:
+    file: subflows/credit-card/enter-name-month-cvv-submit.yml
+
+# Failed payment status shown
+- runFlow:
+    file: subflows/status-updates/wait-for-failure-payment.yml

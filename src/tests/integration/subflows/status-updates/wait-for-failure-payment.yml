@@ -1,0 +1,5 @@
+appId: com.exampleapp
+---
+- extendedWaitUntil:
+    visible: "Payment failed"
+    timeout: 150000

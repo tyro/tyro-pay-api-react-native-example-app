@@ -1,0 +1,23 @@
+appId: com.exampleapp
+---
+- launchApp
+# Run 3DS Challenge Success Flow
+# assert app loaded
+- runFlow:
+    file: subflows/assert-loaded.yml
+
+# Enter card number for 3ds challenge
+- runFlow:
+    file: subflows/3ds/enter-challenge-card-details.yml
+
+# Enter card details name/month/cvv and submit
+- runFlow:
+    file: subflows/credit-card/enter-name-month-cvv-submit.yml
+
+# Complete 3ds challenge
+- runFlow:
+    file: subflows/3ds/complete-3ds-challenge.yml
+
+# Successful payment status
+- runFlow:
+    file: subflows/status-updates/wait-for-success-payment.yml

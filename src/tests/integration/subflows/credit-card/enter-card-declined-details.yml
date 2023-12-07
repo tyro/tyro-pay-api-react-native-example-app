@@ -1,0 +1,5 @@
+appId: com.exampleapp
+---
+- tapOn: 
+    text: "Card number"
+- inputText: "4111111111111103"

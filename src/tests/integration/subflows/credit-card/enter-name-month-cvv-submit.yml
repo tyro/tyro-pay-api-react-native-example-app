@@ -1,0 +1,20 @@
+appId: com.exampleapp
+---
+- tapOn: 
+    text: "Name on card"
+- inputText: "EXAMPLE"
+- hideKeyboard
+- tapOn: 
+    text: "MM/YY"
+- inputText: "1299"
+- tapOn: 
+    text: "CVV"
+- inputText: "123"
+- tapOn:
+    text: "Or pay with card"
+- scrollUntilVisible:
+    element:
+      id: "pay-button"
+    direction: DOWN
+- tapOn:
+    id: "pay-button"

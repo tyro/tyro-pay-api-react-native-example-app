@@ -1,0 +1,8 @@
+appId: com.exampleapp
+---
+- launchApp
+
+# assert app loaded
+# TODO: assert the real ios wallet button visible
+- runFlow:
+    file: ../subflows/wallets/assert-apple-pay.yml

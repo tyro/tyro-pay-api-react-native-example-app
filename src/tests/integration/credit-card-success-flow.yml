@@ -1,0 +1,19 @@
+appId: com.exampleapp
+---
+- launchApp
+# Run Successful Payment Flow
+# assert app loaded
+- runFlow:
+    file: subflows/assert-loaded.yml
+
+# Enter card number for visa success
+- runFlow:
+    file: subflows/credit-card/enter-visa-card-details.yml
+
+# Enter card details name/month/cvv and submit
+- runFlow:
+    file: subflows/credit-card/enter-name-month-cvv-submit.yml
+
+# Successful payment status
+- runFlow:
+    file: subflows/status-updates/wait-for-success-payment.yml

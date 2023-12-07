@@ -1,0 +1,7 @@
+appId: com.exampleapp
+---
+- launchApp
+
+# assert gpay loaded
+- runFlow:
+    file: ../subflows/wallets/assert-gpay.yml
