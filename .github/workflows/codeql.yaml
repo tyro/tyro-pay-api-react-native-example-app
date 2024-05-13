@@ -45,11 +45,6 @@ jobs:
 
     steps:
 
-    - name: Install SSH Client 🔑
-      uses: webfactory/ssh-agent@v0.8.0
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
     - name: Checkout code
       uses: actions/checkout@v3
 
