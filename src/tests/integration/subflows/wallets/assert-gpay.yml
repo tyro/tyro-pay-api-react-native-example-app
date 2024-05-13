@@ -1,4 +1,4 @@
 appId: com.exampleapp
 ---
 - assertVisible:
-    id: "com.exampleapp:id/pay_button_logo"
+    id: "google-pay-button"

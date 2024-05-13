@@ -6,6 +6,7 @@ import { useTyro, PaySheet } from '@tyro/tyro-pay-api-react-native';
 import React, { useEffect } from 'react';
 import { ActivityIndicator, Button, StyleSheet, Text, View } from 'react-native';
 import ErrorHandler from 'Error';
+import PayButton from 'PayButton';
 
 interface CheckoutPageProps {
   paySecret: string;
@@ -13,7 +14,16 @@ interface CheckoutPageProps {
 }
 
 const CheckoutPage = ({ paySecret, resetPaySecret }: CheckoutPageProps): JSX.Element => {
-  const { initPaySheet, initialised, payRequest, isPayRequestReady, isPayRequestLoading, tyroError } = useTyro();
+  const {
+    initPaySheet,
+    initialised,
+    payRequest,
+    isPayRequestReady,
+    isPayRequestLoading,
+    tyroError,
+    isSubmitting,
+    submitPayForm,
+  } = useTyro();
 
   useEffect(() => {
     if (initialised === true && paySecret) {
@@ -41,6 +51,7 @@ const CheckoutPage = ({ paySecret, resetPaySecret }: CheckoutPageProps): JSX.Ele
     <>
       <ErrorHandler errorCode={tyroError?.errorCode ?? tyroError?.errorType} errorMessage={tyroError?.errorMessage} />
       {isPayRequestReady && <PaySheet />}
+      {isPayRequestReady && <PayButton onSubmit={submitPayForm} loading={isSubmitting} title="Pay" />}
       {isPayRequestLoading && <ActivityIndicator />}
     </>
   );
