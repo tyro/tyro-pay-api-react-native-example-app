@@ -54,14 +54,10 @@ function App(): JSX.Element {
                       googlePay: {
                         enabled: true,
                         merchantName: 'Example Merchant',
-                        supportedNetworks: ['mastercard'],
                       },
-                    },
-                    styleProps: {
-                      googlePayButton: {
-                        buttonColor: 'black',
-                        buttonType: 'pay',
-                        buttonBorderRadius: 4,
+                      applePay: {
+                        enabled: true,
+                        merchantIdentifier: 'The merchant name',
                       },
                     },
                   }}

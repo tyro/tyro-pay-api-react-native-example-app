@@ -491,7 +491,7 @@ PODS:
   - RNSVG (14.1.0):
     - React-Core
   - SocketRocket (0.6.1)
-  - tyro-pay-api-react-native (0.0.1-alpha.1):
+  - tyro-pay-api-react-native (0.0.1-alpha.2):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - Yoga (1.14.0)
@@ -724,10 +724,10 @@ SPEC CHECKSUMS:
   ReactCommon: 5f704096ccf7733b390f59043b6fa9cc180ee4f6
   RNSVG: ba3e7232f45e34b7b47e74472386cf4e1a676d0a
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
-  tyro-pay-api-react-native: 6300368a6f854e02059a4bf1c298150944c04aab
+  tyro-pay-api-react-native: e9ccad89ca70def21c2f3231af42701250dee86f
   Yoga: 4c3aa327e4a6a23eeacd71f61c81df1bcdf677d5
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
 PODFILE CHECKSUM: 18fd48e808e852bd26c1f45356abe046e8173b89
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.15.2
