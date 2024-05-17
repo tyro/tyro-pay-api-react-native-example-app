@@ -5,6 +5,9 @@ require Pod::Executable.execute_command('node', ['-p',
     {paths: [process.argv[1]]},
   )', __dir__]).strip
 
+source 'https://github.com/tyro/connect-cocoapods.git'
+source 'https://cdn.cocoapods.org/'
+
 # Read the min iOS version from xcode prj and set min iOS version for Podfile
 require 'xcodeproj'
 project_path = './exampleApp.xcodeproj'
