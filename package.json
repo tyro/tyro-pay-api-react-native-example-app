@@ -31,7 +31,7 @@
     "gradlew:build:sdk": "cd android && chmod +x ./gradlew && ./gradlew --no-daemon -S -Dorg.gradle.dependency.verification=off clean build"
   },
   "dependencies": {
-    "@tyro/tyro-pay-api-react-native": "^0.0.1-alpha.2",
+    "@tyro/tyro-pay-api-react-native": "^0.0.1-alpha.3",
     "react": "18.2.0",
     "react-native": "0.72.7",
     "react-native-svg": "^14.1.0",
