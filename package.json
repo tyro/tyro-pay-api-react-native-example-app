@@ -33,7 +33,7 @@
   "dependencies": {
     "@tyro/tyro-pay-api-react-native": "^0.0.1-alpha.4",
     "react": "18.2.0",
-    "react-native": "0.72.7",
+    "react-native": "^0.72.14",
     "react-native-svg": "^14.1.0",
     "react-native-webview": "^13.7.0"
   },
