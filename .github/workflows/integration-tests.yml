@@ -100,11 +100,6 @@ jobs:
         uses: actions/setup-node@v2.1.5
         with:
           node-version: 18.0.0
-          
-      - name: setup-cocoapods
-        uses: maxim-lobanov/setup-cocoapods@v1
-        with:
-          version: 1.14.3
 
       - name: Checkout code
         uses: actions/checkout@v3
@@ -150,7 +145,7 @@ jobs:
           npm run ios:release
           npm run test:e2e:ios
         env:
-          MAESTRO_DRIVER_STARTUP_TIMEOUT: 30000
+          MAESTRO_DRIVER_STARTUP_TIMEOUT: 600000
 
       - name: Stop Emulator
         run: killall "Simulator"
