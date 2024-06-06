@@ -10,10 +10,13 @@ require 'xcodeproj'
 project_path = './exampleApp.xcodeproj'
 project = Xcodeproj::Project.open(project_path)
 min_ios_version_supported = project.build_configurations.first.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+MIN_IOS_VERSION='16.0'
 
-platform :ios, min_ios_version_supported
+platform :ios, MIN_IOS_VERSION
 prepare_react_native_project!
 
+source 'https://github.com/tyro/connect-cocoapods.git'
+source 'https://cdn.cocoapods.org/'
 
 # If you are using a `react-native-flipper` your iOS build will fail when `NO_FLIPPER=1` is set.
 # because `react-native-flipper` depends on (FlipperKit,...) that will be excluded
@@ -65,5 +68,12 @@ target 'exampleApp' do
       :mac_catalyst_enabled => false
     )
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        if Gem::Version.new(MIN_IOS_VERSION) > Gem::Version.new(config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'])
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = MIN_IOS_VERSION
+        end
+      end
+    end
   end
 end
