@@ -1,5 +1,5 @@
 appId: com.exampleapp
 ---
 - extendedWaitUntil:
-    visible: "Payment failed"
+    visible: "There was an error with the pay request, either validation error or payment failed."
     timeout: 150000
